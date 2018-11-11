@@ -14,7 +14,8 @@ This Repository contains the code for a simple file system implemented for UNIX.
   gcc -Wall fsys.c `pkg-config fuse --cflags --libs` -o fsys
   # Execute 
   ./fsys /PATH_TO_MOUNTPOINT 
-  
+# To Maintain persistence
+  set the path of "filedump" variable correctly and while unmounting use "fusermount(3) -u /path/to/mountpoint"
 # Basic Functionlity Supported  
   1. mkdir
   2. readdir
